@@ -8,7 +8,7 @@ public class School {
     protected Teacher[] teachers = new Teacher[8];
     protected Student[] students = new Student[8];
 
-    public School(String name, String directorName) {
+    public School(String name) {
         this.name = name;
     }
 
@@ -49,6 +49,12 @@ public class School {
                 teachers[i] = newTeacher;
                 break;
             }
+        }
+    }
+    public void addDirector (Director newDirector) {
+        if (director == null){
+            director = newDirector;
+
         }
     }
 

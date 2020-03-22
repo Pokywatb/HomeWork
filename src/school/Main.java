@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        School school1 = new School("aaaa", "Василий Задов");
+        School school1 = new School("aaaa");
         System.out.println(school1.name);
 
         Director dir1 = new Director("Василий Задов", 64);
@@ -13,10 +13,11 @@ public class Main {
 
         school1.addStudent(stud1);
         school1.addTeacher(teacher1);
+        school1.addDirector(dir1);
 
         System.out.println(Arrays.toString(school1.teachers));
 
-        school1.schoolDay(school1.teachers, school1.students, dir1);
+        school1.schoolDay();
 
 
     }
