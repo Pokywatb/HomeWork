@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class School {
     protected final String name;
-    protected String directorName;
+    protected Director director;
     protected Teacher[] teachers = new Teacher[8];
     protected Student[] students = new Student[8];
 
@@ -13,11 +13,11 @@ public class School {
     }
 
 
-    public void schoolDay(Teacher[] teachers, Student[] students, Director dir1) {
-        if (dir1.name == null) {
+    public void schoolDay() {
+        if (director.name == null) {
             System.out.println("Без директора школа не работает.");
         } else {
-            dir1.start();
+            director.start();
             for (Teacher teacheR : teachers) {
                 if(teacheR != null){
                 for (Student studenT : students) {
@@ -28,7 +28,7 @@ public class School {
                 }
 
             }}
-            dir1.stop();
+            director.stop();
         }
 
     }
