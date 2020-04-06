@@ -5,7 +5,7 @@ import java.time.LocalTime;
 public class DaySub extends Subscription implements CanGroup, CanTrain {
     private LocalTime beginSub = LocalTime.of(8, 00);
     private LocalTime endSub = LocalTime.of(16, 00);
-    LocalTime currentTime = LocalTime.now();
+    private LocalTime currentTime = LocalTime.now();
 
     @Override
     public boolean access() {
