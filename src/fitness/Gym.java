@@ -27,7 +27,7 @@ public class Gym {
         if ((sub.getRegDate().isBefore(LocalDate.now()) || sub.getRegDate().isEqual(LocalDate.now())) && (sub.getEndDate().isAfter(LocalDate.now()) || sub.getEndDate().isEqual(LocalDate.now()))) {
             if (sub instanceof FullSub || sub instanceof DaySub || sub instanceof OneTimeSub) {
                 sub.access();
-                if (sub.access() == true) {
+                if (sub.access()) {
                     trainZone.addVisitorTrain(newVisitor);
                 }
             } else {
@@ -44,7 +44,7 @@ public class Gym {
         if ((sub.getRegDate().isBefore(LocalDate.now()) || sub.getRegDate().isEqual(LocalDate.now())) && (sub.getEndDate().isAfter(LocalDate.now()) || sub.getEndDate().isEqual(LocalDate.now()))) {
             if (sub instanceof FullSub || sub instanceof OneTimeSub) {
                 sub.access();
-                if (sub.access() == true) {
+                if (sub.access()){
                     trainZone.addVisitorTrain(newVisitor);
                 }
             } else {
@@ -60,7 +60,7 @@ public class Gym {
     public void toGroup (Subscription sub, Visitor newVisitor) {
         if ((sub.getRegDate().isBefore(LocalDate.now()) || sub.getRegDate().isEqual(LocalDate.now())) && (sub.getEndDate().isAfter(LocalDate.now()) || sub.getEndDate().isEqual(LocalDate.now()))) {
             if (sub instanceof FullSub || sub instanceof DaySub) {
-                if (sub.access() && newVisitor!=null) {
+                if (sub.access()) {
                     trainZone.addVisitorTrain(newVisitor);
                 }
             } else {
